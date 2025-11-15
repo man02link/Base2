@@ -1,6 +1,8 @@
 import Express from 'express'  //la primera es el nombre que le damos a la importaccion
 import {v4 as uuidv4} from 'uuid'
 import Database from 'better-sqlite3';
+import cors from 'cors';//obligatorio para que jale es porque html lo detecta otro se instala con npm i cors
+
 
 const db = new Database('mi_basedatos.db'); //Database es clase
 
@@ -14,6 +16,7 @@ db.exec(`
 `);
 
 const app = Express()//debe de concordar con la primera parte de la importracion
+app.use(cors())//para que detecte el servidor desde Html
 app.use(Express.json())//mismo caso
 
 app.post('/account', (req, res) => {
@@ -133,3 +136,4 @@ app.listen(3000, () => {
     console.log('Servidor escuchando en puerto 3000');
     console.log('Conectado a SQLite con better-sqlite3');
 });
+
