@@ -1,0 +1,92 @@
+/* Estilos Globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de Formularios y Botones */
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1; /* Permite que el input crezca */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición para el hover */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: flex; /* Alinea el input y el botón en la misma línea */
+    gap: 10px;
+    align-items: center;
+}
+
+/* Área de Resultados */
+#results {
+    background-color: #333;
+    color: #00ffaa; /* Verde neón para simular consola */
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto; /* Para manejar contenido ancho */
+    white-space: pre-wrap;
+    min-height: 50px;
+    border-left: 5px solid #007bff;
+}
+
+
+/* --------------------
+   Animación de Carga (Spinner)
+   -------------------- */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading {
+    pointer-events: none; /* Deshabilita clics mientras carga */
+    position: relative;
+    color: transparent !important; /* Oculta el texto del botón */
+    background-color: #0056b3;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px; /* Centrar el spinner */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}

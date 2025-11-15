@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD de Usuarios</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <h1>CRUD de Usuarios</h1>
+
+    <section>
+        <h2>➕ Crear Usuario</h2>
+        <form id="create-form">
+            <input type="text" id="create-name" placeholder="Nombre del nuevo usuario" required>
+            <button type="submit">Crear</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>🔍 Buscar Usuario</h2>
+        <form id="read-form">
+            <input type="text" id="read-id" placeholder="ID del usuario a buscar" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>✏️ Actualizar Nombre</h2>
+        <form id="update-form">
+            <input type="text" id="update-id" placeholder="ID del usuario" required>
+            <input type="text" id="update-name" placeholder="Nuevo nombre" required>
+            <button type="submit">Actualizar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>🗑️ Eliminar Usuario</h2>
+        <form id="delete-form">
+            <input type="text" id="delete-id" placeholder="ID del usuario a eliminar" required>
+            <button type="submit">Eliminar</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <h2>✅ Resultados</h2>
+    <pre id="results"></pre>
+
+    <script src="app.js"></script>
+</body>
+</html>
