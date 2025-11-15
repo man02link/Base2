@@ -1,4 +1,4 @@
-import Express from 'express'
+import Express from 'express'  //la primera es el nombre que le damos a la importaccion
 import {v4 as uuidv4} from 'uuid'
 import Database from 'better-sqlite3';
 
@@ -13,8 +13,8 @@ db.exec(`
     )
 `);
 
-const app = Express()
-app.use(express.json())
+const app = Express()//debe de concordar con la primera parte de la importracion
+app.use(Express.json())//mismo caso
 
 app.post('/account', (req, res) => {
     const { name } = req.body;
