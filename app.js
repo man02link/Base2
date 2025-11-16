@@ -57,7 +57,7 @@ async function handleFormSubmit(e, url, method, data = null) {
 }
 
 // ----------------------------------------------------
-// 1. CREAR USUARIO (POST) - URL CORREGIDA
+// 1. CREAR USUARIO (POST)
 // ----------------------------------------------------
 document.getElementById('create-form').addEventListener('submit', (e) => {
     const name = document.getElementById('create-name').value;
@@ -65,7 +65,7 @@ document.getElementById('create-form').addEventListener('submit', (e) => {
 });
 
 // ----------------------------------------------------
-// 2. BUSCAR USUARIO (GET) - URL CORREGIDA
+// 2. BUSCAR USUARIO (GET)
 // ----------------------------------------------------
 document.getElementById('read-form').addEventListener('submit', (e) => {
     const id = document.getElementById('read-id').value;
@@ -73,7 +73,7 @@ document.getElementById('read-form').addEventListener('submit', (e) => {
 });
 
 // ----------------------------------------------------
-// 3. ACTUALIZAR USUARIO (PATCH) - URL CORREGIDA
+// 3. ACTUALIZAR USUARIO (PATCH)
 // ----------------------------------------------------
 document.getElementById('update-form').addEventListener('submit', (e) => {
     const id = document.getElementById('update-id').value;
@@ -82,9 +82,10 @@ document.getElementById('update-form').addEventListener('submit', (e) => {
 });
 
 // ----------------------------------------------------
-// 4. ELIMINAR USUARIO (DELETE) - URL CORREGIDA
+// 4. ELIMINAR USUARIO (DELETE)
 // ----------------------------------------------------
 document.getElementById('delete-form').addEventListener('submit', (e) => {
     const id = document.getElementById('delete-id').value;
     handleFormSubmit(e, `http://localhost:3000/account/${id}`, 'DELETE');
+
 });
